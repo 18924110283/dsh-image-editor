@@ -1,0 +1,52 @@
+{
+  "name": "@local/image-editor",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A sidebar image editor for the DSH Web UI: open, crop, adjust, transform, undo, and export images.",
+  "license": "MIT",
+  "author": "18924110283",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/18924110283/dsh-image-editor.git"
+  },
+  "homepage": "https://github.com/18924110283/dsh-image-editor#readme",
+  "bugs": {
+    "url": "https://github.com/18924110283/dsh-image-editor/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "image-editor",
+    "canvas",
+    "photoshop"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  }
+}

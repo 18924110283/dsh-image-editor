@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Image Editor",
+    "description": "Adds a left-sidebar image editor: open, crop, adjust, transform, undo, and export PNG/JPEG."
+  }
+}
